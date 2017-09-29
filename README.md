@@ -1,6 +1,6 @@
 # systemd-mon
 
-A sophisticated wrapper for systemd's systemctl built for node.js
+A sophisticated wrapper for systemd's systemctl/journalctl
 
 ##### Watch / Start / Stop systemd services
 
