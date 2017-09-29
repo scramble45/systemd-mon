@@ -1,0 +1,29 @@
+{
+  "name": "systemd-mon",
+  "version": "0.0.1",
+  "description": "start stop and monitor systemd deamons",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "./tests/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scramble45/systemd-mon.git"
+  },
+  "keywords": [
+    "systemd",
+    "monitor",
+    "start",
+    "stop",
+    "linux"
+  ],
+  "author": "Rowan H, Shaun B, Noah B",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/scramble45/systemd-mon/issues"
+  },
+  "homepage": "https://github.com/scramble45/systemd-mon#readme"
+}
