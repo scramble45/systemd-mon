@@ -1,11 +1,6 @@
 const spawn = require('child_process').spawn
     , EventEmitter = require('events')
-    , systemd_events = new EventEmitter()
     ;
-
-systemd_events.on('error', (err) => {
-    console.error(err);
-});
 
 module.exports = {
     watchDeamon: createClient
