@@ -1,6 +1,6 @@
 {
   "name": "systemd-mon",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "start stop and monitor systemd deamons",
   "main": "index.js",
   "directories": {

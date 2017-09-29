@@ -16,7 +16,7 @@ npm i systemd-mon
 ````
 var systemd = require("systemd-mon");
 
-var deamon1 = systemd.createClient('yourservicename.service');
+var deamon1 = systemd.watchDeamon('yourservicename.service');
 var watch1 = deamon1.watch();
 
 watch1.on('active', function(data){
@@ -43,8 +43,3 @@ watch1.on('error', function(err){
 
 ##### Authors:
 Rowan H, Shaun B, Noah B
-
-
-
-
-
