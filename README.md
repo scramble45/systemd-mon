@@ -1,4 +1,4 @@
-#systemd-mon
+# systemd-mon
 
 A sophisticated wrapper for systemd's systemctl built for node.js
 
