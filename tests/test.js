@@ -6,9 +6,9 @@ if(!serviceName){
     process.exit(1);
 }
 
-var deamon1 = systemd.watchDeamon(serviceName);
+var daemon1 = systemd.watchDaemon(serviceName);
 
-var watch1 = deamon1.watch();
+var watch1 = daemon1.watch();
 
 watch1.on('active', (data) => {
     console.log('active', data);

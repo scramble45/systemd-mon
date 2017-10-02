@@ -1,6 +1,6 @@
 # systemd-mon
 
-A sophisticated wrapper for systemd's systemctl/journalctl
+A sophisticated wrapper for systemd's systemctl
 
 ##### Watch / Start / Stop systemd services
 
@@ -16,8 +16,8 @@ npm i systemd-mon
 ````
 var systemd = require("systemd-mon");
 
-var deamon1 = systemd.watchDeamon('yourservicename.service');
-var watch1 = deamon1.watch();
+var daemon1 = systemd.watchDaemon('yourservicename.service');
+var watch1 = daemon1.watch();
 
 watch1.on('active', function(data){
         console.log('active', data);

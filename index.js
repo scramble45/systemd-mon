@@ -3,7 +3,7 @@ const spawn = require('child_process').spawn
     ;
 
 module.exports = {
-    watchDeamon: createClient
+    watchDaemon: createClient
     , Client
     , start
     , stop
