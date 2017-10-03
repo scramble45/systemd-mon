@@ -2,7 +2,7 @@
 
 A sophisticated wrapper for systemd's systemctl
 
-##### Watch / Start / Stop systemd services
+##### Start / Stop / Watch / Monitor systemd services
 
 
 ## Instructions for installing systemd
@@ -18,6 +18,7 @@ var systemd = require("systemd-mon");
 
 var daemon1 = systemd.watchDaemon('yourservicename.service');
 var watch1 = daemon1.watch();
+var monitor1 = daemon1.monitor();
 
 watch1.on('active', function(data){
         console.log('active', data);
@@ -38,6 +39,15 @@ watch1.on('deactivating', function(data){
 watch1.on('error', function(err){
         console.error(err);
 });
+
+monitor1.on(serviceName, (data) => {
+    console.log('Monitored Sevice:', data);
+});
+
+monitor1.on('error', function(err){
+	console.error(err);
+})
+
 ````
 
 
