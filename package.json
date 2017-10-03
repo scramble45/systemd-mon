@@ -1,6 +1,6 @@
 {
   "name": "systemd-mon",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "start stop monitor and watch systemd daemons",
   "main": "index.js",
   "directories": {

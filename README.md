@@ -1,6 +1,6 @@
 # systemd-mon
 
-A sophisticated wrapper for systemd's systemctl
+A sophisticated wrapper for systemd's systemctl/journalctl
 
 ##### Start / Stop / Watch / Monitor systemd services
 
