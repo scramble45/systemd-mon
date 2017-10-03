@@ -6,9 +6,11 @@ if(!serviceName){
     process.exit(1);
 }
 
-var daemon1 = systemd.watchDaemon(serviceName);
+const daemon1 = systemd.watchDaemon(serviceName);
 
-var watch1 = daemon1.watch();
+
+const watch1 = daemon1.watch();
+const monitor1 = daemon1.monitor();
 
 watch1.on('active', (data) => {
     console.log('active', data);
@@ -30,12 +32,11 @@ watch1.on('error', (err) => {
     console.error(err);
 });
 
-let count = 0;
-setInterval(() => {
-    count += 1;
-    if(!count % 2 === 0){
-        systemd.start(serviceName);
-    } else{
-        systemd.stop(serviceName);
-    }
-}, 15 * 1000);
+monitor1.on(serviceName, (data) => {
+    console.log('Monitored Sevice:', data);
+});
+
+monitor1.on('error', err => {
+    console.error(err);
+});
+
