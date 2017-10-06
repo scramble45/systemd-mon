@@ -1,7 +1,7 @@
 {
   "name": "systemd-mon",
-  "version": "0.0.8",
-  "description": "start stop monitor and watch systemd daemons",
+  "version": "0.0.9",
+  "description": "start stop restart monitor and watch systemd daemons",
   "main": "index.js",
   "directories": {
     "test": "tests"
@@ -20,6 +20,7 @@
     "monitor",
     "start",
     "stop",
+    "restart",
     "linux"
   ],
   "author": "Rowan H, Shaun B, Noah B",

@@ -2,7 +2,7 @@
 
 A sophisticated wrapper for systemd's systemctl/journalctl
 
-##### Start / Stop / Watch / Monitor systemd services
+##### Start / Stop / Restart / Watch / Monitor systemd services
 
 
 ## Instructions for installing systemd
@@ -47,6 +47,11 @@ monitor1.on(serviceName, (data) => {
 monitor1.on('error', err => {
 	console.error(err);
 });
+
+/* Start / Stop / Restart - Service */
+systemd.start('yoursevicename');
+systemd.stop('yoursevicename');
+systemd.restart('yoursevicename');
 
 ````
 

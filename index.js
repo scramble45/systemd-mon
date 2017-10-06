@@ -7,6 +7,7 @@ module.exports = {
     , Client
     , start
     , stop
+    , restart
 };
 
 function createClient(servicename, options){
@@ -83,6 +84,16 @@ function stop(servicename){
     let cmd = spawn('systemctl', ['stop', servicename]);
     cmd.stdout.on('data', () => {
         console.log(`stopped ${servicename}`);
+    });
+    cmd.stderr.on('data', (err) => {
+        console.error(`error ${err.toString()}`);
+    });
+}
+
+function restart(servicename){
+    let cmd = spawn('systemctl', ['restart', servicename]);
+    cmd.stdout.on('data', () => {
+        console.log(`restarted ${servicename}`);
     });
     cmd.stderr.on('data', (err) => {
         console.error(`error ${err.toString()}`);
